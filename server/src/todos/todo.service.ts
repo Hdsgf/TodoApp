@@ -41,7 +41,7 @@ export class TodoService {
         )
     }
 
-    async remove(id: string): Promise<void> {
+    async remove(id: string): Promise<void> { // Promise<void> - ничего не возвращаем
         const todo = await this.findOne(id);
         await todo.destroy();
     }
